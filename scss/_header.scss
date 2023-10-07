@@ -1,0 +1,106 @@
+header {
+  background-color: #FFFFFF;
+  max-width: 1920px;
+  height: 80px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  margin: auto;
+
+  svg {
+    width: 131.955px;
+    height: 37px;
+    flex-shrink: 0;
+  }
+
+  ul.mainMenu {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 38px;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    li {
+      color: #0B141F;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      /* 162.5% */
+      letter-spacing: 0.064px;
+      position: relative;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      & svg {
+        height: 16px;
+        width: 16px;        
+      }
+      &.last {
+        display: inline-flex;
+        height: 44px;
+        color: white;
+        padding: 10px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+        border-radius: 40px;
+        border: 4px solid #0030251a;
+        background: #007E60;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }    
+
+      &:hover .submenu ul {        
+        transition: all .4s linear; 
+        opacity: 1;
+        visibility: visible;
+      }  
+
+      div.submenu ul {
+        display: inline-flex;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .4s linear; 
+        background: rgb(255, 255, 255);
+        border-radius: 8px;
+        padding: 10px;
+        align-items: flex-start;
+        list-style-type: none;
+        flex-direction: column;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 220px;
+        box-shadow: 3px 1px 0px 2px #0000001a;
+        border: 1px solid #7878785e;
+        li {
+          color: #0B141F;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 26px;
+          /* 162.5% */
+          letter-spacing: 0.064px;
+          position: relative;
+          background: none;
+          transition: all .1s linear;
+          &:hover {
+            color: #007e60;
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+
+  }
+}
